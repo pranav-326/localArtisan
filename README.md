@@ -1,5 +1,5 @@
-#Artisan compass
-###App to help local artisans in the realm of digital marketing
+# Artisan compass
+### App to help local artisans in the realm of digital marketing
 
 To run 
 Prereqs: Node
