@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Compass</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <h1>Artisan Compass</h1>
+
+    <div class="parent">
+        <div class="form-column">
+            <form action="/generate" method="POST" enctype="multipart/form-data" class="stacked-form">
+                <div class="form-card">
+                    <label for="image">Insert image here</label>
+                    <input type="file" name="image" id="image" accept="image/*" required>
+                </div>
+                <div class="form-card">
+                    <label for="prompt">Description</label>
+                    <input type="text" id="prompt" name="prompt" placeholder="Describe your product here..." required>
+                </div>
+                <button type="submit">Generate</button>
+            </form>
+        </div>
+        <div class="story-card">
+            <% if (locals.story) { %>
+                <h2>story</h2>
+                <p><%= story %></p>
+           <% } else { %>
+            <h4 style="align-items: center;" class="noStoryYet">Your story will appear here ✨✨</h4>
+              <% } %>
+        </div>
+    </div>
+    Powered by Gemini
+</body>
+</html>
